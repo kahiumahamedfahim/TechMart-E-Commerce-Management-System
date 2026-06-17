@@ -1,0 +1,52 @@
+﻿@model TechMart_E_Commerce_Management_System.ViewModels.ResendOtpViewModels
+
+@{
+    ViewData["Title"] = "Resend OTP";
+}
+
+<h2>Resend Verification Code</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<form asp-action="ResendOtp" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All"
+         class="text-danger">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email"
+               class="form-label">
+        </label>
+
+        <input asp-for="Email"
+               class="form-control" />
+
+        <span asp-validation-for="Email"
+              class="text-danger">
+        </span>
+    </div>
+
+    <button type="submit"
+            class="btn btn-warning">
+        Resend OTP
+    </button>
+
+    <a asp-action="VerifyEmail"
+       class="btn btn-secondary">
+        Back To Verification
+    </a>
+
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
