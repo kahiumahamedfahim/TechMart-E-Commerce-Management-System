@@ -4,6 +4,7 @@ using TechMart_E_Commerce_Management_System.Data.Entities.User;
 using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Services.Common;
+using TechMart_E_Commerce_Management_System.Services.File.Interfaces;
 using TechMart_E_Commerce_Management_System.ViewModels;
 
 namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
@@ -15,12 +16,14 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly ILogger<AuthService> _logger;
         private readonly IEmailService _emailService;
+        private readonly IFileService _fileservice;
 
         public AuthService(IUserRepository userRepo,
             IPasswordHasher<User> passwordHasher,
             ILogger<AuthService> logger,
             IEmailVerificationRepository emailVerificationRepository,
-            IEmailService emailService
+            IEmailService emailService,
+            IFileService fileservice
             )
         {
             _userRepo = userRepo;
@@ -28,6 +31,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
             _logger = logger;
             _emailVerificationRepo = emailVerificationRepository;
             _emailService = emailService;
+            _fileservice = fileservice;
 
         }
 
@@ -84,6 +88,17 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
 
                 var userId =
                     await GenerateUserIdAsync(role);
+                var uploadResult =
+                    await _fileservice.UploadImageAsync(model.ProfileImage,
+                    "users", FileConstants.ImageExtensions,
+                    FileConstants.ProductImageMaxSize);
+                if (!uploadResult.IsSuccess &&
+    model.ProfileImage != null)
+                {
+                    return ServiceResult.Failue(
+                        uploadResult.ErrorMessage ??
+                        "Image upload failed.");
+                }
 
                 var user = new User
                 {
@@ -95,7 +110,9 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                     IsEmailVerified = false,
                     IsActive = true,
                     CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow
+                    UpdatedAt = DateTime.UtcNow,
+                    ProfileImage = uploadResult.FilePath
+
                 };
 
                 user.PasswordHash =
@@ -187,43 +204,63 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
             }
         }
 
-        public async Task<ServiceResult> VerifyEmailAsync(VerifyEmailViewModel model)
+        public async Task<ServiceResult> VerifyEmailAsync(
+            string email,
+            string verificationCode)
         {
             try
             {
-                var email = model.Email
-                                    .Trim()
-                                    .ToLower();
+                email = email
+                    .Trim()
+                    .ToLower();
+
                 var user =
                     await _userRepo.GetByEmailAsync(email);
+
                 if (user == null)
                 {
-                    return ServiceResult.Failue("User not found!");
+                    return ServiceResult.Failue(
+                        "User not found!");
                 }
+
                 var verification =
-                await _emailVerificationRepo.GetValidCodeAsync(user.Id,
-                model.VerificationCode);
+                    await _emailVerificationRepo
+                        .GetValidCodeAsync(
+                            user.Id,
+                            verificationCode);
+
                 if (verification == null)
                 {
-                    return ServiceResult.Failue("Invalid or Expired OTP");
+                    return ServiceResult.Failue(
+                        "Invalid or Expired OTP");
                 }
-                verification.IsUsed = true;
-                user.IsEmailVerified = true;
-                user.UpdatedAt = DateTime.UtcNow;
-                _emailVerificationRepo.Update(verification);
 
+                verification.IsUsed = true;
+
+                user.IsEmailVerified = true;
+
+                user.UpdatedAt =
+                    DateTime.UtcNow;
+
+                _emailVerificationRepo.Update(
+                    verification);
 
                 _userRepo.Update(user);
-                await _emailVerificationRepo.SaveChangeAsync();
-                return ServiceResult.Success("Email verification" +
-                    "Sucessefully");
 
+                await _emailVerificationRepo
+                    .SaveChangeAsync();
+
+                return ServiceResult.Success(
+                    "Email verified successfully.");
             }
             catch (Exception ex)
-
             {
-                _logger.LogError(ex, "Email Verification error");
-                return ServiceResult.Failue("An unexpected error occurred");
+                _logger.LogError(
+                    ex,
+                    "Email Verification Error");
+
+                return ServiceResult.Failue(
+                    "An unexpected error occurred.");
             }
         }
 

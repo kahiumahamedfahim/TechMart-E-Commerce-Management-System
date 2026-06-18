@@ -8,7 +8,8 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.interfaces
     {
         Task<ServiceResult> RegisterAsync(RegisterVIewModel model);
 
-        Task<ServiceResult> VerifyEmailAsync(VerifyEmailViewModel model);
+        Task<ServiceResult> VerifyEmailAsync(string email,
+    string verificationCode);
         Task<ServiceResult> ResendVerificationCodeAsync(ResendOtpViewModels model);
         Task<User?> ValidateUserAsync(LoginViewModel model);
     }

@@ -8,6 +8,8 @@ using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Auth.implementations;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Services.Email;
+using TechMart_E_Commerce_Management_System.Services.File.Implementations;
+using TechMart_E_Commerce_Management_System.Services.File.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +34,9 @@ builder.Services.Configure<EmailSettings>(
 builder.Services.AddScoped<
     IEmailService,
     EmailService>();
+builder.Services.AddScoped<
+    IFileService,
+    FileService>();
 //session cookies part
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme)

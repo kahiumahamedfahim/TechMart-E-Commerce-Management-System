@@ -20,5 +20,7 @@ namespace TechMart_E_Commerce_Management_System.ViewModels
         [DataType(DataType.Password)]
         [Compare(nameof(Password))]
         public string? ConfirmPassword { get; set; }
+
+        public IFormFile? ProfileImage { get; set; }
     }
 }

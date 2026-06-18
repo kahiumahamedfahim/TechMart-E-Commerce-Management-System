@@ -21,17 +21,6 @@
          class="text-danger">
     </div>
 
-    @* <div class="mb-3">
-        <label asp-for="Email"></label>
-
-        <input asp-for="Email"
-               class="form-control" />
-
-        <span asp-validation-for="Email"
-              class="text-danger">
-        </span>
-    </div> *@
-
     <div class="mb-3">
         <label asp-for="VerificationCode"></label>
 
@@ -50,6 +39,7 @@
 
 </form>
 
-@section Scripts {
+@section Scripts
+{
     <partial name="_ValidationScriptsPartial" />
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechMart E-Commerce Management System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+967268e6a6c1b64a41af50671a6c78b4886607a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52f93f41ed45e850b0166568ab25a073d3dbc67c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechMart E-Commerce Management System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechMart E-Commerce Management System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
