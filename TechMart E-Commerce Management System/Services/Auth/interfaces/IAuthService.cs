@@ -12,5 +12,13 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.interfaces
     string verificationCode);
         Task<ServiceResult> ResendVerificationCodeAsync(ResendOtpViewModels model);
         Task<User?> ValidateUserAsync(LoginViewModel model);
+        Task<ServiceResult> ForgetPasswordAsync(string email);
+        Task<ServiceResult> VerifyResetCodeAsync(string email,
+            string resetCode);
+        Task<ServiceResult> ResetPasswordAsync(
+    string email,
+    string resetCode,
+    string newPassword);
+
     }
 }

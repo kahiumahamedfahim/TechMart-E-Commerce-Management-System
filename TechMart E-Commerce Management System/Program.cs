@@ -37,6 +37,9 @@ builder.Services.AddScoped<
 builder.Services.AddScoped<
     IFileService,
     FileService>();
+builder.Services.AddScoped<
+    IPasswordResetRepository,
+    PasswordResetRepository>();
 //session cookies part
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme)
@@ -80,6 +83,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Auth}/{action=Register}/{id?}");
+    pattern: "{controller=Auth}/{action=ForgotPassword}/{id?}");
 
 app.Run();

@@ -17,13 +17,15 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
         private readonly ILogger<AuthService> _logger;
         private readonly IEmailService _emailService;
         private readonly IFileService _fileservice;
-
+        private readonly IPasswordResetRepository _passwordRepo;
         public AuthService(IUserRepository userRepo,
             IPasswordHasher<User> passwordHasher,
             ILogger<AuthService> logger,
             IEmailVerificationRepository emailVerificationRepository,
             IEmailService emailService,
-            IFileService fileservice
+            IFileService fileservice,
+            IPasswordResetRepository passwordRepository
+
             )
         {
             _userRepo = userRepo;
@@ -32,6 +34,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
             _emailVerificationRepo = emailVerificationRepository;
             _emailService = emailService;
             _fileservice = fileservice;
+            _passwordRepo = passwordRepository;
 
         }
 
@@ -93,7 +96,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                     "users", FileConstants.ImageExtensions,
                     FileConstants.ProductImageMaxSize);
                 if (!uploadResult.IsSuccess &&
-    model.ProfileImage != null)
+                        model.ProfileImage != null)
                 {
                     return ServiceResult.Failue(
                         uploadResult.ErrorMessage ??
@@ -348,6 +351,150 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
 
         <p>This code will expire in 10 minutes.</p>
         ");
+        }
+
+
+
+        public async Task<ServiceResult> VerifyResetCodeAsync(string email, string resetCode)
+        {
+            try
+            {
+                email = email.Trim().ToLower();
+                var user =
+                    await _userRepo.GetByEmailAsync(email);
+                if (user == null)
+                {
+                    return ServiceResult.Failue(
+                        "User not found!");
+                }
+                var verification =
+                    await _passwordRepo.GetValidCodeAsync(
+                        user.Id,
+                        resetCode);
+                if (verification == null)
+                {
+                    return ServiceResult.Failue
+                        ("Invalid or expired reset code.");
+                }
+                return ServiceResult.Success
+                    ("Reset code verified successfully.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex,
+                    "Reset code verification error");
+                return ServiceResult.Failue("An unexpected error occured");
+            }
+        }
+
+
+
+        public async Task<ServiceResult> ForgetPasswordAsync(string email)
+        {
+            try
+            {
+                email = email.Trim().ToLower();
+                var user =
+                    await _userRepo.GetByEmailAsync(email);
+                if (user == null)
+                {
+                    return ServiceResult.Failue(
+                        "User not found");
+                }
+                if (!user.IsEmailVerified)
+                {
+                    return ServiceResult.Failue
+                        ("Email is not Verified.");
+
+                }
+                var otp =
+                     GenerateOtp();
+                await SendOtpMessageAsync(user.Email, otp);
+                var resetCode =
+                    new PasswordResetCode
+                    {
+                        Id = Guid.NewGuid(),
+                        UserId = user.Id,
+                        ResetCode = otp,
+                        ExpiryTime = DateTime.UtcNow.
+                        AddMinutes(10),
+                        IsUsed = false
+                    };
+                await _passwordRepo.AddAsync(resetCode);
+                await _passwordRepo.SaveChangeAsync();
+                return ServiceResult.Success(
+                    "Password reset code sent Succeefully.");
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex,
+                    "Forget Password error.");
+                return ServiceResult.Failue(
+                    "An unexpected error occurred.");
+            }
+        }
+        private async Task SendResetPasswordOtpAsync(
+            string email,
+            string otp)
+        {
+            await _emailService.SendEmailAsync(email,
+                "TechMart Password Reset",
+        $@"
+        <h2>Password Reset Request</h2>
+
+        <p>Your password reset code is:</p>
+
+        <h1>{otp}</h1>
+
+        <p>This code will expire in 10 minutes.</p>
+        ");
+
+        }
+
+
+        public async Task<ServiceResult> ResetPasswordAsync(string email,
+            string resetCode,
+            string newPassword)
+        {
+            try
+            {
+                email = email.Trim().ToLower();
+                var user =
+                    await _userRepo.GetByEmailAsync(email);
+                if (user == null)
+                {
+                    return ServiceResult.Failue
+                        ("User not found.");
+                }
+                var verification =
+                    await _passwordRepo.GetValidCodeAsync
+                    (user.Id, resetCode);
+                if (verification == null)
+                {
+                    return ServiceResult.Failue(
+                        "Invalid or Expired reset code.");
+                }
+                user.PasswordHash =
+                    _passwordHasher.HashPassword(
+                        user, newPassword);
+                user.UpdatedAt = DateTime.UtcNow;
+                verification.IsUsed = true;
+                _userRepo.Update(user);
+                _passwordRepo.Update(verification);
+                await _passwordRepo.SaveChangeAsync();
+                return ServiceResult.Success
+                    ("Password reset sucessfully done ");
+
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError(ex,
+                    "Password Reset error.");
+                return ServiceResult.Failue(
+                    "An umexpecrted error occured.");
+            }
         }
     }
 }

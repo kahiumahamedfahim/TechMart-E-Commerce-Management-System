@@ -1,0 +1,45 @@
+﻿@model TechMart_E_Commerce_Management_System.ViewModels.VerifyResetCodeViewModel
+
+@{
+    ViewData["Title"] = "Verify Reset Code";
+}
+
+<h2>Verify Reset Code</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<form asp-action="VerifyResetCode" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All"
+         class="text-danger">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ResetCode"></label>
+
+        <input asp-for="ResetCode"
+               class="form-control" />
+
+        <span asp-validation-for="ResetCode"
+              class="text-danger">
+        </span>
+    </div>
+
+    <button type="submit"
+            class="btn btn-success">
+        Verify Code
+    </button>
+
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

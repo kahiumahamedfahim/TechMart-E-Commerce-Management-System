@@ -36,7 +36,7 @@ namespace TechMart_E_Commerce_Management_System.Services.File.Implementations
         {
             var folderPath =
                Path.Combine(Directory.GetCurrentDirectory(),
-               "wwwwroot",
+               "wwwroot",
                "uploads",
                folderName);
             if (!Directory.Exists(folderPath))

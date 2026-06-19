@@ -199,5 +199,113 @@ namespace TechMart_E_Commerce_Management_System.Controllers
             return RedirectToAction(
                 nameof(VerifyEmail));
         }
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(
+           ForgetPasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result =
+                await _authService.ForgetPasswordAsync(model.Email);
+            if (!result.IsSuccess)
+            {
+                ModelState.AddModelError("", result.Message);
+                return View(model);
+
+            }
+            TempData["Email"] = model.Email;
+            TempData["Success"] =
+                result.Message;
+            return RedirectToAction(nameof(VerifyResetCode));
+        }
+
+
+        [HttpGet]
+        public IActionResult VerifyResetCode()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> VerifyResetCode(
+            VerifyResetCodeViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var email =
+                TempData["Email"]?.ToString();
+            TempData.Keep("Email");
+            if (string.IsNullOrEmpty(email))
+            {
+                ModelState.AddModelError("", "Session expired.Please try again");
+                return View(model);
+            }
+            var result =
+                await _authService.VerifyResetCodeAsync(email,
+                model.ResetCode);
+            if (!result.IsSuccess)
+            {
+                ModelState.AddModelError("", result.Message);
+                return View(model);
+            }
+            TempData["ResetCode"] = model.ResetCode;
+            return RedirectToAction(nameof(ResetPassword));
+        }
+
+
+        [HttpGet]
+        public IActionResult ResetPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(
+            ResetPasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var email =
+                TempData["Email"]?.ToString();
+            var resetCode =
+                TempData["ResetCode"]?.ToString();
+
+            if (string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(resetCode))
+            {
+                ModelState.AddModelError
+                    ("", "Session Expired.Please try again.");
+                return View(model);
+            }
+            var result =
+                await _authService.ResetPasswordAsync(email,
+                resetCode, model.Password);
+
+            if (!result.IsSuccess)
+            {
+                ModelState.AddModelError("",
+                    result.Message);
+                return View(model);
+            }
+            TempData["Success"] =
+                result.Message;
+            return RedirectToAction(nameof(Login));
+        }
+
     }
 }
