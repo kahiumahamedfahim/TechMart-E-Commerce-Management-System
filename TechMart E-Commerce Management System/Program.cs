@@ -10,6 +10,8 @@ using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Services.Email;
 using TechMart_E_Commerce_Management_System.Services.File.Implementations;
 using TechMart_E_Commerce_Management_System.Services.File.Interfaces;
+using TechMart_E_Commerce_Management_System.Services.Profile.implementations;
+using TechMart_E_Commerce_Management_System.Services.Profile.interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +42,7 @@ builder.Services.AddScoped<
 builder.Services.AddScoped<
     IPasswordResetRepository,
     PasswordResetRepository>();
+builder.Services.AddScoped<IProfileService, ProfileService>();
 //session cookies part
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme)
@@ -83,6 +86,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Auth}/{action=ForgotPassword}/{id?}");
+     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
