@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TechMart_E_Commerce_Management_System.Data.Entities.User;
+using TechMart_E_Commerce_Management_System.Data.Entities;
 
 namespace TechMart_E_Commerce_Management_System.Data
 {

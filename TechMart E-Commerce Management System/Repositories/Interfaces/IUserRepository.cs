@@ -1,5 +1,5 @@
-﻿using TechMart_E_Commerce_Management_System.Data.Entities.Enums;
-using TechMart_E_Commerce_Management_System.Data.Entities.User;
+﻿using TechMart_E_Commerce_Management_System.Data.Entities;
+using TechMart_E_Commerce_Management_System.Data.Enums;
 
 namespace TechMart_E_Commerce_Management_System.Repositories.Interfaces
 {

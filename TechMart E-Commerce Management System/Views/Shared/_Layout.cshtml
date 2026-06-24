@@ -55,6 +55,16 @@
                             </a>
                         </li>
                     }
+                    @if (User.IsInRole("SuperAdmin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Auth"
+                               asp-action="CreateAdmin">
+                                Create Admin
+                            </a>
+                        </li>
+                    }
 
                 </ul>
 

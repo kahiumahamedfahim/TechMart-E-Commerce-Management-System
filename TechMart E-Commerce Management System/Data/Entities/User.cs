@@ -1,6 +1,6 @@
-﻿using TechMart_E_Commerce_Management_System.Data.Entities.Enums;
+﻿using TechMart_E_Commerce_Management_System.Data.Enums;
 
-namespace TechMart_E_Commerce_Management_System.Data.Entities.User
+namespace TechMart_E_Commerce_Management_System.Data.Entities
 {
     public class User
     {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
@@ -306,6 +307,33 @@ namespace TechMart_E_Commerce_Management_System.Controllers
                 result.Message;
             return RedirectToAction(nameof(Login));
         }
+        [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
+        public IActionResult CreateAdmin()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
+        public async Task<IActionResult> CreateAdmin(CreateAdminViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result =
+                await _authService.CreateAdminAsync(model);
+            if (!result.IsSuccess)
+            {
+                ModelState.AddModelError("", result.Message);
+                return View(model);
+            }
+            TempData["Email"] = model.Email;
+            TempData["Success"] =
+                result.Message;
+            return RedirectToAction(nameof(VerifyEmail));
+        }
     }
 }

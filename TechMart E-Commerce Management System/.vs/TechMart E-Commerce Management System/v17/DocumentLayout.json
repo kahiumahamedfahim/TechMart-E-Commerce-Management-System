@@ -3,20 +3,72 @@
   "WorkspaceRootPath": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\services\\auth\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:services\\auth\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\auth\\createadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:views\\auth\\createadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\viewmodels\\createadminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:viewmodels\\createadminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\services\\auth\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:services\\auth\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\services\\admin\\implementation\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:services\\admin\\implementation\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\services\\admin\\interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:services\\admin\\interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\entities\\emailverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\entities\\emailverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\entities\\passwordresetcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\entities\\passwordresetcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\profile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -41,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\auth\\resendotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:views\\auth\\resendotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -95,10 +143,6 @@
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:viewmodels\\editprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -115,24 +159,12 @@
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\services\\auth\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:services\\auth\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\viewmodels\\forgetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:viewmodels\\forgetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\services\\auth\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:services\\auth\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\services\\auth\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:services\\auth\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\entities\\user\\passwordresetcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\entities\\user\\passwordresetcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\repositories\\implementations\\passwordresetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -161,14 +193,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\viewmodels\\verifyemailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:viewmodels\\verifyemailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\entities\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\entities\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\migrations\\20260616222235_fixemailverificationuserid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -211,10 +235,6 @@
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\entities\\user\\emailverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\entities\\user\\emailverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\configurations\\securitypurpose\\emailverificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\configurations\\securitypurpose\\emailverificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -233,10 +253,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\configurations\\users\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\configurations\\users\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|d:\\project\\techmart-e-commerce-management-system\\techmart e-commerce management system\\data\\entities\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC798D6-62AB-406C-8EC3-4F2EB2113D0D}|TechMart E-Commerce Management System.csproj|solutionrelative:data\\entities\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -246,7 +262,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -261,60 +277,25 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T01:29:56.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ResetPassword.cshtml",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\ResetPassword.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\ResetPassword.cshtml",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\ResetPassword.cshtml",
-              "RelativeToolTip": "Views\\Auth\\ResetPassword.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAA8wF4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-19T20:10:52.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "VerifyEmail.cshtml",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\VerifyEmail.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\VerifyEmail.cshtml",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\VerifyEmail.cshtml",
-              "RelativeToolTip": "Views\\Auth\\VerifyEmail.cshtml",
-              "ViewState": "AgIAAEMAAAAAAAAAAAA8wFwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-16T22:09:01.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Profile\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Profile\\Edit.cshtml",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Profile\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Profile\\Edit.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAA8wHMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-22T00:31:20.299Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "CreateAdmin.cshtml",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\CreateAdmin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\CreateAdmin.cshtml",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\CreateAdmin.cshtml",
+              "RelativeToolTip": "Views\\Auth\\CreateAdmin.cshtml",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAGwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-24T20:13:49.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Profile\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Profile\\Index.cshtml",
@@ -322,7 +303,156 @@
               "RelativeToolTip": "Views\\Profile\\Index.cshtml",
               "ViewState": "AgIAAF4AAAAAAAAAAAA8wGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-22T00:13:47.028Z",
+              "WhenOpened": "2026-06-22T00:13:47.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\User.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\User.cs",
+              "RelativeToolTip": "Data\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T15:10:50.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAADcBAAAAAAAAAABAwEABAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T12:12:02.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Auth\\implementations\\AuthService.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\implementations\\AuthService.cs",
+              "RelativeToolTip": "Services\\Auth\\implementations\\AuthService.cs",
+              "ViewState": "AgIAAMoBAAAAAAAAAIAwwPgBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T11:40:37.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Admin\\Implementation\\AdminService.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\Implementation\\AdminService.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Admin\\Implementation\\AdminService.cs",
+              "RelativeToolTip": "Services\\Admin\\Implementation\\AdminService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA8wAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T20:58:31.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Enums\\Role.cs",
+              "RelativeDocumentMoniker": "Data\\Enums\\Role.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Enums\\Role.cs",
+              "RelativeToolTip": "Data\\Enums\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T15:14:19.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAEIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-22T01:20:21.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Auth\\interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Services\\Auth\\interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T11:36:25.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateAdminViewModel.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\CreateAdminViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CreateAdminViewModel.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\CreateAdminViewModel.cs",
+              "RelativeToolTip": "ViewModels\\CreateAdminViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T20:50:23.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Admin\\Interfaces\\IAdminService.cs",
+              "RelativeDocumentMoniker": "Services\\Admin\\Interfaces\\IAdminService.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Admin\\Interfaces\\IAdminService.cs",
+              "RelativeToolTip": "Services\\Admin\\Interfaces\\IAdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T20:53:50.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T01:29:56.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Register.cshtml",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAAGUAAAAAAAAAAAA8wHQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-16T22:07:27.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterVIewModel.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\RegisterVIewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RegisterVIewModel.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\RegisterVIewModel.cs",
+              "RelativeToolTip": "ViewModels\\RegisterVIewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T11:08:52.596Z",
               "EditorCaption": ""
             },
             {
@@ -333,31 +463,62 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAIAwwFgAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-13T10:20:18.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAHIAAAAAAAAAAADwv4kAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-22T01:20:21.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "DocumentIndex": 13,
+              "Title": "PasswordResetCode.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\PasswordResetCode.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\PasswordResetCode.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\PasswordResetCode.cs",
+              "RelativeToolTip": "Data\\Entities\\PasswordResetCode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T09:11:38.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
+              "Title": "EmailVerification.cs",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\EmailVerification.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\EmailVerification.cs",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\EmailVerification.cs",
+              "RelativeToolTip": "Data\\Entities\\EmailVerification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T15:17:50.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "VerifyEmail.cshtml",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\VerifyEmail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\VerifyEmail.cshtml",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\VerifyEmail.cshtml",
+              "RelativeToolTip": "Views\\Auth\\VerifyEmail.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAA8wFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-16T22:09:01.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Profile\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Profile\\Edit.cshtml",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Profile\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Profile\\Edit.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAA8wHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-22T00:31:20.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -365,12 +526,11 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-22T01:25:26.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-22T01:25:26.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
               "Title": "ResendOtp.cshtml",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\ResendOtp.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\ResendOtp.cshtml",
@@ -378,25 +538,23 @@
               "RelativeToolTip": "Views\\Auth\\ResendOtp.cshtml",
               "ViewState": "AgIAAEMAAAAAAAAAAAA8wFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-16T22:14:14.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-16T22:14:14.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\Register.cshtml",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\Register.cshtml",
-              "RelativeToolTip": "Views\\Auth\\Register.cshtml",
-              "ViewState": "AgIAAIMAAAAAAAAAAAA8wJwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\ResetPassword.cshtml",
+              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\ResetPassword.cshtml",
+              "RelativeToolTip": "Views\\Auth\\ResetPassword.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAA8wF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-16T22:07:27.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T20:10:52.154Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 23,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
@@ -404,12 +562,11 @@
               "RelativeToolTip": "Views\\Auth\\Login.cshtml",
               "ViewState": "AgIAAGAAAAAAAAAAAAA8wHkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-16T22:09:29.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-16T22:09:29.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "VerifyResetCode.cshtml",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\VerifyResetCode.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\VerifyResetCode.cshtml",
@@ -417,12 +574,11 @@
               "RelativeToolTip": "Views\\Auth\\VerifyResetCode.cshtml",
               "ViewState": "AgIAAEMAAAAAAAAAAAA8wFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-19T20:10:20.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T20:10:20.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\ForgotPassword.cshtml",
@@ -430,12 +586,11 @@
               "RelativeToolTip": "Views\\Auth\\ForgotPassword.cshtml",
               "ViewState": "AgIAADwAAAAAAAAAAAA8wFQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-19T20:08:41.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T20:08:41.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Views\\Auth\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\AccessDenied.cshtml",
@@ -443,12 +598,11 @@
               "RelativeToolTip": "Views\\Auth\\AccessDenied.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAA8wB4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-16T22:10:17.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-16T22:10:17.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 26,
               "Title": "site.css",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -456,12 +610,11 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAGYAAAAAAAAAAAA8wH8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-06-21T17:29:15.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T17:29:15.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "ProfileService.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Profile\\implementations\\ProfileService.cs",
               "RelativeDocumentMoniker": "Services\\Profile\\implementations\\ProfileService.cs",
@@ -469,12 +622,11 @@
               "RelativeToolTip": "Services\\Profile\\implementations\\ProfileService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T00:01:55.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-22T00:01:55.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 29,
               "Title": "IProfileService.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Profile\\interfaces\\IProfileService.cs",
               "RelativeDocumentMoniker": "Services\\Profile\\interfaces\\IProfileService.cs",
@@ -482,12 +634,11 @@
               "RelativeToolTip": "Services\\Profile\\interfaces\\IProfileService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T19:18:37.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T19:18:37.521Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 30,
               "Title": "ServiceResult.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Common\\ServiceResult.cs",
               "RelativeDocumentMoniker": "Services\\Common\\ServiceResult.cs",
@@ -495,12 +646,11 @@
               "RelativeToolTip": "Services\\Common\\ServiceResult.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAYwAkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T11:28:36.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T11:28:36.925Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "FileConstants.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Common\\FileConstants.cs",
               "RelativeDocumentMoniker": "Services\\Common\\FileConstants.cs",
@@ -508,12 +658,11 @@
               "RelativeToolTip": "Services\\Common\\FileConstants.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T21:21:46.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-17T21:21:46.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 31,
               "Title": "FileUploadResult.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Common\\FileUploadResult.cs",
               "RelativeDocumentMoniker": "Services\\Common\\FileUploadResult.cs",
@@ -521,12 +670,11 @@
               "RelativeToolTip": "Services\\Common\\FileUploadResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T21:17:36.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-17T21:17:36.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
@@ -534,12 +682,11 @@
               "RelativeToolTip": "Controllers\\ProfileController.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAADwv28AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T18:57:07.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T18:57:07.376Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
               "Title": "FileService.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\File\\Implementations\\FileService.cs",
               "RelativeDocumentMoniker": "Services\\File\\Implementations\\FileService.cs",
@@ -547,12 +694,11 @@
               "RelativeToolTip": "Services\\File\\Implementations\\FileService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T21:09:06.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-17T21:09:06.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 35,
               "Title": "ProfileViewModel.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\ProfileViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ProfileViewModel.cs",
@@ -560,12 +706,11 @@
               "RelativeToolTip": "ViewModels\\ProfileViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T19:07:50.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T19:07:50.798Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "EditProfileViewModel.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\EditProfileViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\EditProfileViewModel.cs",
@@ -573,12 +718,11 @@
               "RelativeToolTip": "ViewModels\\EditProfileViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T00:18:50.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-22T00:18:50.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 37,
               "Title": "site.js",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -586,25 +730,11 @@
               "RelativeToolTip": "wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-06-21T17:29:11.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T17:29:11.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAA8wOgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T12:12:02.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 38,
               "Title": "jquery.validate.unobtrusive.js",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
               "RelativeDocumentMoniker": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
@@ -612,12 +742,11 @@
               "RelativeToolTip": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
               "ViewState": "AgIAAIAAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-06-21T17:28:55.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-21T17:28:55.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 36,
               "Title": "IGenericeRepository.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Repositories\\Interfaces\\IGenericeRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IGenericeRepository.cs",
@@ -625,36 +754,11 @@
               "RelativeToolTip": "Repositories\\Interfaces\\IGenericeRepository.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAA4wBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T10:35:09.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T10:35:09.708Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\implementations\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Auth\\implementations\\AuthService.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\implementations\\AuthService.cs",
-              "RelativeToolTip": "Services\\Auth\\implementations\\AuthService.cs",
-              "ViewState": "AgIAAA0BAAAAAAAAAAA2wIcBAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T11:40:37.606Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Auth\\interfaces\\IAuthService.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\interfaces\\IAuthService.cs",
-              "RelativeToolTip": "Services\\Auth\\interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T11:36:25.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 40,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\interfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "Services\\Auth\\interfaces\\IEmailService.cs",
@@ -666,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 39,
               "Title": "ForgetPasswordViewModel.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\ForgetPasswordViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ForgetPasswordViewModel.cs",
@@ -678,19 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "PasswordResetCode.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\User\\PasswordResetCode.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\User\\PasswordResetCode.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\User\\PasswordResetCode.cs",
-              "RelativeToolTip": "Data\\Entities\\User\\PasswordResetCode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T09:11:38.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 41,
               "Title": "PasswordResetRepository.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Repositories\\Implementations\\PasswordResetRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\PasswordResetRepository.cs",
@@ -702,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 42,
               "Title": "IPasswordResetRepository.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Repositories\\Interfaces\\IPasswordResetRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IPasswordResetRepository.cs",
@@ -714,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 43,
               "Title": "ResetPasswordViewModel.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\ResetPasswordViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ResetPasswordViewModel.cs",
@@ -726,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 44,
               "Title": "VerifyResetCodeViewModel.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\VerifyResetCodeViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\VerifyResetCodeViewModel.cs",
@@ -738,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 45,
               "Title": "IFileService.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\File\\Interfaces\\IFileService.cs",
               "RelativeDocumentMoniker": "Services\\File\\Interfaces\\IFileService.cs",
@@ -750,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "VerifyEmailViewModel.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\VerifyEmailViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\VerifyEmailViewModel.cs",
@@ -762,19 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "RegisterVIewModel.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\RegisterVIewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RegisterVIewModel.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\RegisterVIewModel.cs",
-              "RelativeToolTip": "ViewModels\\RegisterVIewModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T11:08:52.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 46,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -786,19 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\User\\User.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\User\\User.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\User\\User.cs",
-              "RelativeToolTip": "Data\\Entities\\User\\User.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA0wBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T15:10:50.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 48,
               "Title": "20260616222235_FixEmailVerificationUserId.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Migrations\\20260616222235_FixEmailVerificationUserId.cs",
               "RelativeDocumentMoniker": "Migrations\\20260616222235_FixEmailVerificationUserId.cs",
@@ -810,19 +878,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 49,
               "Title": "AppDbcontext.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\AppDbcontext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbcontext.cs",
               "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\AppDbcontext.cs",
               "RelativeToolTip": "Data\\AppDbcontext.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA9wBQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-13T10:13:40.842Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 50,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
@@ -834,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 51,
               "Title": "ResendOtpViewModels.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\ViewModels\\ResendOtpViewModels.cs",
               "RelativeDocumentMoniker": "ViewModels\\ResendOtpViewModels.cs",
@@ -846,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 52,
               "Title": "EmailService.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Auth\\implementations\\EmailService.cs",
               "RelativeDocumentMoniker": "Services\\Auth\\implementations\\EmailService.cs",
@@ -858,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 53,
               "Title": "EmailSettings.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Services\\Email\\EmailSettings.cs",
               "RelativeDocumentMoniker": "Services\\Email\\EmailSettings.cs",
@@ -870,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 54,
               "Title": "IEmailVerificationRepository.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Repositories\\Interfaces\\IEmailVerificationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IEmailVerificationRepository.cs",
@@ -882,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 55,
               "Title": "EmailVerificationRepository.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Repositories\\Implementations\\EmailVerificationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\EmailVerificationRepository.cs",
@@ -894,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 56,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Repositories\\Implementations\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\GenericRepository.cs",
@@ -906,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 57,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Repositories\\Implementations\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\UserRepository.cs",
@@ -918,31 +986,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "EmailVerification.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\User\\EmailVerification.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\User\\EmailVerification.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\User\\EmailVerification.cs",
-              "RelativeToolTip": "Data\\Entities\\User\\EmailVerification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T15:17:50.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "EmailVerificationConfiguration.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Configurations\\SecurityPurpose\\EmailVerificationConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Configurations\\SecurityPurpose\\EmailVerificationConfiguration.cs",
               "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Configurations\\SecurityPurpose\\EmailVerificationConfiguration.cs",
               "RelativeToolTip": "Data\\Configurations\\SecurityPurpose\\EmailVerificationConfiguration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAMBVwBYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-13T10:04:02.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Repositories\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IUserRepository.cs",
@@ -954,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "TechMart E-Commerce Management System.csproj",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\TechMart E-Commerce Management System.csproj",
               "RelativeDocumentMoniker": "TechMart E-Commerce Management System.csproj",
@@ -966,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 61,
               "Title": "PasswordResetConfiguration.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Configurations\\SecurityPurpose\\PasswordResetConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Configurations\\SecurityPurpose\\PasswordResetConfiguration.cs",
@@ -978,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 62,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Configurations\\Users\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Configurations\\Users\\UserConfiguration.cs",
@@ -987,18 +1043,6 @@
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwCcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-13T09:17:41.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\Enums\\Role.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\Enums\\Role.cs",
-              "ToolTip": "D:\\project\\TechMart-E-Commerce-Management-System\\TechMart E-Commerce Management System\\Data\\Entities\\Enums\\Role.cs",
-              "RelativeToolTip": "Data\\Entities\\Enums\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T15:14:19.083Z"
             }
           ]
         }

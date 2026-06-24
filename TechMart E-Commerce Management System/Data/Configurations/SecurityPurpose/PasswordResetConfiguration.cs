@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TechMart_E_Commerce_Management_System.Data.Entities.User;
+using TechMart_E_Commerce_Management_System.Data.Entities;
 
 namespace TechMart_E_Commerce_Management_System.Data.Configurations.SecurityPurpose
 {

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TechMart_E_Commerce_Management_System.Data;
-using TechMart_E_Commerce_Management_System.Data.Entities.User;
+using TechMart_E_Commerce_Management_System.Data.Entities;
 using TechMart_E_Commerce_Management_System.Repositories.Implementations;
 using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Auth.implementations;

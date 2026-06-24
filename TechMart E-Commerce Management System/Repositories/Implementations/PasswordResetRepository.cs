@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TechMart_E_Commerce_Management_System.Data;
-using TechMart_E_Commerce_Management_System.Data.Entities.User;
+using TechMart_E_Commerce_Management_System.Data.Entities;
 using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 
 namespace TechMart_E_Commerce_Management_System.Repositories.Implementations

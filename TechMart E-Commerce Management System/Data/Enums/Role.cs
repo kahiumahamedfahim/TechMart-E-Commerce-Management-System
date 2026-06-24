@@ -1,4 +1,4 @@
-﻿namespace TechMart_E_Commerce_Management_System.Data.Entities.Enums
+﻿namespace TechMart_E_Commerce_Management_System.Data.Enums
 {
     public enum Role
     {

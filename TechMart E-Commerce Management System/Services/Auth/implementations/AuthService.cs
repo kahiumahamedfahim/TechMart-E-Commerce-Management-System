@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using TechMart_E_Commerce_Management_System.Data.Entities.Enums;
-using TechMart_E_Commerce_Management_System.Data.Entities.User;
+using TechMart_E_Commerce_Management_System.Data.Entities;
+using TechMart_E_Commerce_Management_System.Data.Enums;
 using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Services.Common;
 using TechMart_E_Commerce_Management_System.Services.File.Interfaces;
 using TechMart_E_Commerce_Management_System.ViewModels;
+
+
+
 
 namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
 {
@@ -111,7 +114,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                     Email = email,
                     Role = role,
                     IsEmailVerified = false,
-                    IsActive = true,
+                    IsActive = false,
                     CreatedAt = DateTime.UtcNow,
                     UpdatedAt = DateTime.UtcNow,
                     ProfileImage = uploadResult.FilePath
@@ -241,6 +244,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                 verification.IsUsed = true;
 
                 user.IsEmailVerified = true;
+                user.IsActive = true;
 
                 user.UpdatedAt =
                     DateTime.UtcNow;
@@ -496,5 +500,129 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                     "An umexpecrted error occured.");
             }
         }
+
+        public async Task<ServiceResult> CreateAdminAsync(CreateAdminViewModel model)
+        {
+            try
+            {
+                var originalEmail = model.Email.Trim();
+
+                var email = originalEmail.ToLower();
+
+                var existingUser =
+                    await _userRepo.GetByEmailAsync(email);
+
+                if (existingUser != null)
+                {
+                    if (existingUser.IsEmailVerified)
+                    {
+                        return ServiceResult.Failue(
+                            "Email already exists!");
+                    }
+
+                    var otp = GenerateOtp();
+
+                    var verificationCode =
+                        new EmailVerification
+                        {
+                            Id = Guid.NewGuid(),
+                            UserId = existingUser.Id,
+                            VerificationCode = otp,
+                            ExpiryTime = DateTime.UtcNow.AddMinutes(10),
+                            IsUsed = false
+                        };
+
+                    await _emailVerificationRepo.AddAsync(
+                        verificationCode);
+
+                    await _emailVerificationRepo.SaveChangeAsync();
+
+                    await SendOtpMessageAsync(
+                        originalEmail,
+                        otp);
+
+                    return ServiceResult.Success(
+                        "Account exists but email is not verified. A new OTP has been generated.");
+                }
+
+                var role = Role.Admin;
+
+                var userId =
+                    await GenerateUserIdAsync(role);
+                var uploadResult =
+                    await _fileservice.UploadImageAsync(model.ProfileImage,
+                    "users", FileConstants.ImageExtensions,
+                    FileConstants.ProductImageMaxSize);
+                if (!uploadResult.IsSuccess &&
+                        model.ProfileImage != null)
+                {
+                    return ServiceResult.Failue(
+                        uploadResult.ErrorMessage ??
+                        "Image upload failed.");
+                }
+
+                var user = new User
+                {
+                    Id = Guid.NewGuid(),
+                    UserId = userId,
+                    Name = model.Name.Trim(),
+                    Email = email,
+                    Role = role,
+                    IsEmailVerified = false,
+                    IsActive = false,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow,
+                    ProfileImage = uploadResult.FilePath
+
+                };
+
+                user.PasswordHash =
+                    _passwordHasher.HashPassword(
+                        user,
+                        model.Password);
+
+                await _userRepo.AddAsync(user);
+
+                await _userRepo.SaveChangeAsync();
+
+                var otpCode = GenerateOtp();
+
+                var emailVerification =
+                    new EmailVerification
+                    {
+                        Id = Guid.NewGuid(),
+                        UserId = user.Id,
+                        VerificationCode = otpCode,
+                        ExpiryTime = DateTime.UtcNow.AddMinutes(10),
+                        IsUsed = false
+                    };
+
+                await _emailVerificationRepo.AddAsync(
+                    emailVerification);
+
+                await _emailVerificationRepo.SaveChangeAsync();
+
+                await SendOtpMessageAsync(
+                    originalEmail,
+                    otpCode);
+
+                _logger.LogInformation(
+                    "User registered successfully: {Email}",
+                    email);
+
+                return ServiceResult.Success(
+                    "Registration successful. Please verify your email.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Registration Error");
+
+                return ServiceResult.Failue(
+                    "An unexpected error occurred.");
+            }
+        }
     }
 }
+
