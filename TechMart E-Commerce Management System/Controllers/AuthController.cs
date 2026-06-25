@@ -335,5 +335,42 @@ namespace TechMart_E_Commerce_Management_System.Controllers
                 result.Message;
             return RedirectToAction(nameof(VerifyEmail));
         }
+        [HttpGet]
+        [Authorize]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ChangePassword(
+            ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+
+            }
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null)
+            {
+                return RedirectToAction(nameof(Login));
+
+            }
+            var userId =
+                Guid.Parse(userIdClaim);
+            var result = await _authService.ChangePasswordAsync(userId, model);
+            if (!result.IsSuccess)
+            {
+                ModelState.AddModelError("", result.Message);
+                return View(model);
+            }
+            TempData["Sucess"] = result.Message;
+            await HttpContext.SignOutAsync(
+        CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction(nameof(Login));
+        }
+
     }
 }

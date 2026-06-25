@@ -5,7 +5,9 @@ namespace TechMart_E_Commerce_Management_System.Services.Admin.Interfaces
 {
     public interface IAdminService
     {
-        Task<ServiceResult> CreateAdminAsyn(CreateAdminViewModel
-            model);
+
+        Task<List<AdminListViewModel>> GetAdminsAsync(
+    string? search);
+        Task<ServiceResult> ToggleAdminStatusAsync(Guid id);
     }
 }

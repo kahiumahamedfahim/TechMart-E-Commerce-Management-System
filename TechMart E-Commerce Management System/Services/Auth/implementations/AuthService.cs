@@ -43,7 +43,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
 
 
         public async Task<ServiceResult> RegisterAsync(
-    RegisterVIewModel model)
+                        RegisterVIewModel model)
         {
             try
             {
@@ -623,6 +623,52 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                     "An unexpected error occurred.");
             }
         }
+
+        public async Task<ServiceResult> ChangePasswordAsync(Guid userId, ChangePasswordViewModel model)
+        {
+            try
+            {
+                var user = await _userRepo.GetByIdAsync(userId);
+                if (user == null)
+                {
+                    return ServiceResult.Failue("UserNot found");
+                }
+                var result =
+                   _passwordHasher.VerifyHashedPassword(user, user.PasswordHash!,
+                   model.CurrrentPassword);
+                if (result == PasswordVerificationResult.Failed)
+                {
+                    return ServiceResult.Failue("current Password is incorrect");
+                }
+                if (model.CurrrentPassword == model.NewPassword)
+                {
+                    return ServiceResult.Failue(
+                        "New Password cannot be  the same as the current Password");
+                }
+                user.PasswordHash =
+                    _passwordHasher.HashPassword(user,
+                    model.NewPassword);
+                user.UpdatedAt = DateTime.Now;
+                _userRepo.Update(user);
+                await _userRepo.SaveChangeAsync();
+                _logger.LogInformation(
+                    "Password change successfully for UserId: {UserId}",
+                    user.UserId);
+                return ServiceResult.Success(
+                    "Password Changed successfully.");
+
+
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError(ex, "Change Password Error");
+                return ServiceResult.Failue(
+                    "An unexpecrted error occured.");
+            }
+        }
+
+
     }
 }
 

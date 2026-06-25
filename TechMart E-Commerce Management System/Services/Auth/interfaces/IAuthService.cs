@@ -21,4 +21,8 @@ string verificationCode);
                                     string resetCode,
                                     string newPassword);
     Task<ServiceResult> CreateAdminAsync(CreateAdminViewModel model);
+
+    Task<ServiceResult> ChangePasswordAsync(Guid userId, ChangePasswordViewModel model);
+
+
 }

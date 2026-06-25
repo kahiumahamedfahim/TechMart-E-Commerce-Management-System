@@ -30,6 +30,27 @@ namespace TechMart_E_Commerce_Management_System.Repositories.Implementations
             return result;
         }
 
+        public async Task<List<User>> GetAdminsAsync(
+     string? search)
+        {
+            var query =
+                _dbSet.Where(x => x.Role == Role.Admin);
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                search = search.Trim();
+
+                query = query.Where(x =>
+                    x.Name!.Contains(search) ||
+                    x.Email!.Contains(search) ||
+                    x.UserId!.Contains(search));
+            }
+
+            return await query
+                .OrderBy(x => x.Name)
+                .ToListAsync();
+        }
+
         public async Task<User?> GetByEmailAsync(string email)
 
         {

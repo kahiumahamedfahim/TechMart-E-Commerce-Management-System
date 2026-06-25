@@ -1,0 +1,433 @@
+﻿@model List<TechMart_E_Commerce_Management_System.ViewModels.AdminListViewModel>
+
+@{
+    ViewData["Title"] = "Admin Management";
+}
+
+
+<div class="container-fluid mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h2 class="fw-bold">
+            Admin Management
+        </h2>
+
+        <a asp-controller="Auth" asp-action="CreateAdmin"
+           class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i>
+            Create Admin
+        </a>
+
+    </div>
+
+    <div class="card shadow-sm mb-4">
+
+        <div class="card-body">
+
+            <form asp-action="AdminList"
+                  method="get">
+
+                <div class="row">
+
+                    <div class="col-md-10">
+
+                        <input type="text"
+                               id="searchInput"
+                               name="search"
+                               value="@ViewBag.Search"
+                               class="form-control"
+                               placeholder="Search by User ID, Name or Email..." />
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <button type="submit"
+                                id="btnSearch"
+                                class="btn btn-success w-100">
+                            Search
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-dark">
+
+                        <tr>
+
+                            <th>User ID</th>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Email Status</th>
+
+                            <th>Account Status</th>
+
+                            <th>Created</th>
+
+                            <th class="text-center">
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="adminTableBody">
+
+                        @if (Model.Any())
+                        {
+                            foreach (var admin in Model)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @admin.UserId
+                                    </td>
+
+                                    <td>
+                                        @admin.Name
+                                    </td>
+
+                                    <td>
+                                        @admin.Email
+                                    </td>
+
+                                    <td>
+
+                                        @if (admin.IsEmailVerified)
+                                        {
+                                            <span class="badge bg-success">
+                                                Verified
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning text-dark">
+                                                Pending
+                                            </span>
+                                        }
+
+                                    </td>
+
+                                    <td>
+
+                                        @if (admin.IsActive)
+                                        {
+                                            <span class="badge bg-primary">
+                                                Active
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">
+                                                Disabled
+                                            </span>
+                                        }
+
+                                    </td>
+
+                                    <td>
+                                        @admin.CreatedAt.ToString("dd MMM yyyy")
+                                    </td>
+
+                                    <td class="text-center">
+
+
+
+                                        <button type="button"
+                                                class="btn btn-sm @(admin.IsActive ? "btn-danger" : "btn-success") toggle-status"
+                                                data-id="@admin.Id"
+                                                data-active="@admin.IsActive">
+
+                                            @(admin.IsActive ? "Disable" : "Enable")
+
+                                        </button>
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+
+                                <td colspan="7"
+                                    class="text-center text-muted">
+
+                                    No Admin Found.
+
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+
+        $(document).ready(function () {
+
+            // Live Search
+            $("#searchInput").on("keyup", function () {
+
+                loadAdmins($(this).val());
+
+            });
+
+            // Toggle Enable / Disable
+            $(document).on("click", ".toggle-status", function () {
+
+                let button = $(this);
+
+                let id = button.data("id");
+
+                let isActive = button.data("active");
+
+                let action = isActive ? "Disable" : "Enable";
+
+                Swal.fire({
+
+                    title: "Are you sure?",
+
+                    text: isActive
+                        ? "This admin will no longer be able to login."
+                        : "This admin will be able to login again.",
+
+                    icon: "warning",
+
+                    showCancelButton: true,
+
+                    confirmButtonText: action,
+
+                    confirmButtonColor: "#d33",
+
+                    cancelButtonColor: "#3085d6"
+
+                }).then((result) => {
+
+                    if (result.isConfirmed) {
+
+                        toggleAdmin(id);
+
+                    }
+
+                });
+
+            });
+
+        });
+
+
+        // ----------------------------
+        // Load Admins
+        // ----------------------------
+
+        function loadAdmins(search) {
+
+            $.ajax({
+
+                url: "/Admin/GetAdmins",
+
+                type: "GET",
+
+                data: {
+                    search: search
+                },
+
+                success: function (admins) {
+
+                    renderTable(admins);
+
+                },
+
+                error: function () {
+
+                    Swal.fire(
+                        "Error",
+                        "Unable to load admins.",
+                        "error");
+
+                }
+
+            });
+
+        }
+
+
+        // ----------------------------
+        // Toggle Admin Status
+        // ----------------------------
+
+        function toggleAdmin(id) {
+
+            $.ajax({
+
+                url: "/Admin/ToggleAdminStatus",
+
+                type: "POST",
+
+                data: {
+
+                    id: id,
+
+                    __RequestVerificationToken:
+                        $('input[name="__RequestVerificationToken"]').val()
+
+                },
+
+                success: function (response) {
+
+                    if (response.success) {
+
+                        Swal.fire({
+
+                            icon: "success",
+
+                            title: "Success",
+
+                            text: response.message,
+
+                            timer: 1200,
+
+                            showConfirmButton: false
+
+                        });
+
+                        loadAdmins($("#searchInput").val());
+
+                    }
+                    else {
+
+                        Swal.fire(
+                            "Error",
+                            response.message,
+                            "error");
+
+                    }
+
+                },
+
+                error: function () {
+
+                    Swal.fire(
+                        "Error",
+                        "Something went wrong.",
+                        "error");
+
+                }
+
+            });
+
+        }
+
+
+        // ----------------------------
+        // Render Table
+        // ----------------------------
+
+        function renderTable(admins) {
+
+            let rows = "";
+
+            if (admins.length === 0) {
+
+                rows = `
+                    <tr>
+                        <td colspan="7" class="text-center">
+                            No Admin Found
+                        </td>
+                    </tr>`;
+            }
+            else {
+
+                $.each(admins, function (i, admin) {
+
+                    rows += `
+                        <tr>
+
+                            <td>${admin.userId}</td>
+
+                            <td>${admin.name}</td>
+
+                            <td>${admin.email}</td>
+
+                            <td>
+
+                                ${admin.isEmailVerified
+                                    ? '<span class="badge bg-success">Verified</span>'
+                                    : '<span class="badge bg-warning text-dark">Pending</span>'}
+
+                            </td>
+
+                            <td>
+
+                                ${admin.isActive
+                                    ? '<span class="badge bg-primary">Active</span>'
+                                    : '<span class="badge bg-danger">Disabled</span>'}
+
+                            </td>
+
+                            <td>
+
+                                ${new Date(admin.createdAt).toLocaleDateString()}
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-sm ${admin.isActive ? 'btn-danger' : 'btn-success'} toggle-status"
+                                    data-id="${admin.id}"
+                                    data-active="${admin.isActive}">
+
+                                    ${admin.isActive ? 'Disable' : 'Enable'}
+
+                                </button>
+
+                            </td>
+
+                        </tr>`;
+                });
+
+            }
+
+            $("#adminTableBody").html(rows);
+
+        }
+
+    </script>
+}

@@ -1,4 +1,5 @@
-﻿using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
+﻿using TechMart_E_Commerce_Management_System.Data.Enums;
+using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Admin.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Services.Common;
@@ -27,29 +28,83 @@ namespace TechMart_E_Commerce_Management_System.Services.Admin.Implementation
 
         }
 
-        public Task<ServiceResult> CreateAdminAsyn(CreateAdminViewModel model)
+        public async Task<List<AdminListViewModel>> GetAdminsAsync(
+          string? search = null)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var admins =
+                    await _userRepo.GetAdminsAsync(search);
+
+                var adminList =
+                    admins.Select(x => new AdminListViewModel
+                    {
+                        Id = x.Id,
+
+                        UserId = x.UserId ?? string.Empty,
+
+                        Name = x.Name ?? string.Empty,
+
+                        Email = x.Email ?? string.Empty,
+
+                        IsEmailVerified = x.IsEmailVerified,
+
+                        IsActive = x.IsActive,
+
+                        CreatedAt = x.CreatedAt
+
+                    }).ToList();
+
+                return adminList;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Error while getting admin list.");
+
+                return new List<AdminListViewModel>();
+            }
         }
-        //public async Task<ServiceResult> CreateAdminAsyn(CreateAdminViewModel model)
-        //{
-        //    try
-        //    {
-        //        var email =
-        //            model.Email.Trim().ToLower();
-        //        var existingUser =
-        //            await _userRepo.GetByEmailAsync(email);
-        //        if (existingUser != null)
-        //        {
-        //            return ServiceResult.Failue(
-        //                "Email is already exists");
-        //        }
+        public async Task<ServiceResult> ToggleAdminStatusAsync(Guid id)
+        {
+            try
+            {
+                var admin =
+                    await _userRepo.GetByIdAsync(id);
 
-        //    }
-        //    catch (Exception ex)
-        //    {
+                if (admin == null)
+                {
+                    return ServiceResult.Failue("Admin not found.");
+                }
 
-        //    }
-        //}
+                if (admin.Role != Role.Admin)
+                {
+                    return ServiceResult.Failue("Invalid admin.");
+                }
+
+                admin.IsActive = !admin.IsActive;
+
+                admin.UpdatedAt = DateTime.UtcNow;
+
+                _userRepo.Update(admin);
+
+                await _userRepo.SaveChangeAsync();
+
+                return ServiceResult.Success(
+                    admin.IsActive
+                        ? "Admin enabled successfully."
+                        : "Admin disabled successfully.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Error while changing admin status.");
+
+                return ServiceResult.Failue(
+                    "Something went wrong.");
+            }
+        }
     }
 }

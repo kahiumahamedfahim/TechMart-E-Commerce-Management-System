@@ -12,5 +12,7 @@ namespace TechMart_E_Commerce_Management_System.Repositories.Interfaces
         Task<bool> AnySuperAdminExistsAsync();
 
         Task<int> GetRoleCountAsync(Role role);
+        Task<List<User>> GetAdminsAsync(
+     string? search);
     }
 }

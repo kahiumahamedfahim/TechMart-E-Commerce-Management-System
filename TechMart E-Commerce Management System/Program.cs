@@ -5,6 +5,8 @@ using TechMart_E_Commerce_Management_System.Data;
 using TechMart_E_Commerce_Management_System.Data.Entities;
 using TechMart_E_Commerce_Management_System.Repositories.Implementations;
 using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
+using TechMart_E_Commerce_Management_System.Services.Admin.Implementation;
+using TechMart_E_Commerce_Management_System.Services.Admin.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Auth.implementations;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Services.Email;
@@ -43,6 +45,7 @@ builder.Services.AddScoped<
     IPasswordResetRepository,
     PasswordResetRepository>();
 builder.Services.AddScoped<IProfileService, ProfileService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
 //session cookies part
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme)
