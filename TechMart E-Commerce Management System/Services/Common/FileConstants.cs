@@ -16,6 +16,8 @@
            5 * 1024 * 1024;
         public const long AllImageMaxSize =
             2 * 1024 * 1024;
+        public const long CategoryImageMaxSize =
+    2 * 1024 * 1024;
 
 
     }

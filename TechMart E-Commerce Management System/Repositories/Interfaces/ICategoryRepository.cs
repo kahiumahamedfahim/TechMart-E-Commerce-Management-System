@@ -9,6 +9,7 @@ namespace TechMart_E_Commerce_Management_System.Repositories.Interfaces
         Task<bool> ExistsByNameAsync(string name);
         Task<IEnumerable<Catagory>> SearchAsync(string keyword);
         Task<Catagory?> GetLastCatagoryAsync();
+        Task<Catagory> GetByCatagoryId(int catagoryId);
 
 
     }

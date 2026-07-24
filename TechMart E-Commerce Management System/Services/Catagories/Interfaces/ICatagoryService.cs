@@ -11,6 +11,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Catagories.Interfaces
         Task<ServiceResult> DeleteCatagory(int id);
         Task<CatagoryListViewModel> GetCatagorById(int id);
         Task<IEnumerable<CatagoryListViewModel>> SearchCatagoriesAsync(string keyword);
+        Task<UpdateCategoryViewModel> GetUpdateCategoryAsync(int id);
 
     }
 }

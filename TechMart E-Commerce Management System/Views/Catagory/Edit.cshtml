@@ -1,0 +1,165 @@
+﻿@using TechMart_E_Commerce_Management_System.ViewModels.CatagoriesDTO
+@model UpdateCategoryViewModel
+
+@{
+    ViewData["Title"] = "Edit Category";
+}
+
+<div class="container mt-4">
+
+    <div class="card shadow-lg border-0">
+
+        <div class="card-header bg-warning text-dark">
+            <h4 class="mb-0">
+                <i class="bi bi-pencil-square"></i>
+                Edit Category
+            </h4>
+        </div>
+
+        <div class="card-body">
+
+            <form asp-action="Edit"
+                  method="post"
+                  enctype="multipart/form-data">
+
+                @Html.AntiForgeryToken()
+
+                <input asp-for="Id" type="hidden" />
+                <input asp-for="ExistingImagePath" type="hidden" />
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger mb-3">
+                </div>
+
+                <!-- Category Code -->
+                @* <div class="mb-3">
+
+                    <label asp-for="Code" class="form-label"></label>
+
+                    <input asp-for="Code"
+                           class="form-control"
+                           readonly />
+
+                </div> *@
+
+                <!-- Category Name -->
+                <div class="mb-3">
+
+                    <label asp-for="Name" class="form-label"></label>
+
+                    <input asp-for="Name"
+                           class="form-control"
+                           placeholder="Enter category name" />
+
+                    <span asp-validation-for="Name"
+                          class="text-danger"></span>
+
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+
+                    <label asp-for="Description"
+                           class="form-label"></label>
+
+                    <textarea asp-for="Description"
+                              rows="4"
+                              class="form-control"
+                              placeholder="Enter category description"></textarea>
+
+                    <span asp-validation-for="Description"
+                          class="text-danger"></span>
+
+                </div>
+
+                <!-- Current Image -->
+                <div class="mb-3">
+
+                    <label class="form-label fw-bold">
+                        Current Image
+                    </label>
+
+                    <div>
+
+                        @if (!string.IsNullOrEmpty(Model.ExistingImagePath))
+                        {
+                            <img src="@Model.ExistingImagePath"
+                                 class="img-thumbnail rounded shadow-sm"
+                                 style="width:150px;height:150px;object-fit:cover;" />
+                        }
+                        else
+                        {
+                            <img src="~/images/no-image.png"
+                                 class="img-thumbnail rounded shadow-sm"
+                                 style="width:150px;height:150px;object-fit:cover;" />
+                        }
+
+                    </div>
+
+                </div>
+
+                <!-- Upload New Image -->
+                <div class="mb-3">
+
+                    <label asp-for="Image" class="form-label">
+                        Change Image
+                    </label>
+
+                    <input asp-for="Image"
+                           type="file"
+                           class="form-control"
+                           accept=".jpg,.jpeg,.png,.webp" />
+
+                    <small class="text-muted">
+                        Leave empty if you don't want to change the current image.
+                    </small>
+
+                    <span asp-validation-for="Image"
+                          class="text-danger"></span>
+
+                </div>
+
+                <!-- Status -->
+                <div class="form-check mb-4">
+
+                    <input asp-for="IsActive"
+                           class="form-check-input" />
+
+                    <label asp-for="IsActive"
+                           class="form-check-label"></label>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-between">
+
+                    <a asp-action="Index"
+                       class="btn btn-secondary">
+
+                        <i class="bi bi-arrow-left"></i>
+                        Back
+
+                    </a>
+
+                    <button type="submit"
+                            class="btn btn-warning">
+
+                        <i class="bi bi-save"></i>
+                        Update Category
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

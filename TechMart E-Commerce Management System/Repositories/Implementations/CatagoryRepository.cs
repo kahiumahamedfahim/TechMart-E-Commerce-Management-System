@@ -20,6 +20,12 @@ namespace TechMart_E_Commerce_Management_System.Repositories.Implementations
 
         }
 
+        public async Task<Catagory> GetByCatagoryId(int catagoryId)
+        {
+            var result = await _dbSet.FirstOrDefaultAsync(c => c.Id == catagoryId);
+            return result;
+        }
+
         public async Task<Catagory?> GetByCodeAsync(string code)
         {
             return await _dbSet.FirstOrDefaultAsync(c => c.Code == code);
@@ -36,7 +42,7 @@ namespace TechMart_E_Commerce_Management_System.Repositories.Implementations
         public async Task<IEnumerable<Catagory>> SearchAsync(string keyword)
         {
             var result =
-                await _dbSet.Where(c => c.Name.Contains(keyword) 
+                await _dbSet.Where(c => c.Name.Contains(keyword)
                 ||
                 c.Code.Contains(keyword))
                 .ToListAsync();
