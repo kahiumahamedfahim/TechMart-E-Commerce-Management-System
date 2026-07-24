@@ -5,7 +5,7 @@ using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Services.Common;
 using TechMart_E_Commerce_Management_System.Services.File.Interfaces;
-using TechMart_E_Commerce_Management_System.ViewModels;
+using TechMart_E_Commerce_Management_System.ViewModels.UsersDTO;
 
 
 
@@ -77,7 +77,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                     await _emailVerificationRepo.AddAsync(
                         verificationCode);
 
-                    await _emailVerificationRepo.SaveChangeAsync();
+                    await _emailVerificationRepo.SaveChangesAsync();
 
                     await SendOtpMessageAsync(
                         originalEmail,
@@ -128,7 +128,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
 
                 await _userRepo.AddAsync(user);
 
-                await _userRepo.SaveChangeAsync();
+                await _userRepo.SaveChangesAsync();
 
                 var otpCode = GenerateOtp();
 
@@ -145,7 +145,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                 await _emailVerificationRepo.AddAsync(
                     emailVerification);
 
-                await _emailVerificationRepo.SaveChangeAsync();
+                await _emailVerificationRepo.SaveChangesAsync();
 
                 await SendOtpMessageAsync(
                     originalEmail,
@@ -200,7 +200,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                         IsUsed = false
                     };
                 await _emailVerificationRepo.AddAsync(verification);
-                await _emailVerificationRepo.SaveChangeAsync();
+                await _emailVerificationRepo.SaveChangesAsync();
                 return ServiceResult.Success("Verification code resent");
             }
             catch (Exception ex)
@@ -255,7 +255,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                 _userRepo.Update(user);
 
                 await _emailVerificationRepo
-                    .SaveChangeAsync();
+                    .SaveChangesAsync();
 
                 return ServiceResult.Success(
                     "Email verified successfully.");
@@ -425,7 +425,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                         IsUsed = false
                     };
                 await _passwordRepo.AddAsync(resetCode);
-                await _passwordRepo.SaveChangeAsync();
+                await _passwordRepo.SaveChangesAsync();
                 return ServiceResult.Success(
                     "Password reset code sent Succeefully.");
 
@@ -486,7 +486,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                 verification.IsUsed = true;
                 _userRepo.Update(user);
                 _passwordRepo.Update(verification);
-                await _passwordRepo.SaveChangeAsync();
+                await _passwordRepo.SaveChangesAsync();
                 return ServiceResult.Success
                     ("Password reset sucessfully done ");
 
@@ -535,7 +535,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                     await _emailVerificationRepo.AddAsync(
                         verificationCode);
 
-                    await _emailVerificationRepo.SaveChangeAsync();
+                    await _emailVerificationRepo.SaveChangesAsync();
 
                     await SendOtpMessageAsync(
                         originalEmail,
@@ -583,7 +583,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
 
                 await _userRepo.AddAsync(user);
 
-                await _userRepo.SaveChangeAsync();
+                await _userRepo.SaveChangesAsync();
 
                 var otpCode = GenerateOtp();
 
@@ -600,7 +600,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                 await _emailVerificationRepo.AddAsync(
                     emailVerification);
 
-                await _emailVerificationRepo.SaveChangeAsync();
+                await _emailVerificationRepo.SaveChangesAsync();
 
                 await SendOtpMessageAsync(
                     originalEmail,
@@ -650,7 +650,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Auth.implementations
                     model.NewPassword);
                 user.UpdatedAt = DateTime.Now;
                 _userRepo.Update(user);
-                await _userRepo.SaveChangeAsync();
+                await _userRepo.SaveChangesAsync();
                 _logger.LogInformation(
                     "Password change successfully for UserId: {UserId}",
                     user.UserId);

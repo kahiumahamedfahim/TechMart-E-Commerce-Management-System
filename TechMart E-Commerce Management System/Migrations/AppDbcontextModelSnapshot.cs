@@ -22,7 +22,61 @@ namespace TechMart_E_Commerce_Management_System.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.User.EmailVerification", b =>
+            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.Catagory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<DateTime?>("LastUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("categories", (string)null);
+                });
+
+            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.EmailVerification", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -51,7 +105,7 @@ namespace TechMart_E_Commerce_Management_System.Migrations
                     b.ToTable("EmailVerification");
                 });
 
-            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.User.PasswordResetCode", b =>
+            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.PasswordResetCode", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -80,7 +134,7 @@ namespace TechMart_E_Commerce_Management_System.Migrations
                     b.ToTable("PasswordResetCodes");
                 });
 
-            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.User.User", b =>
+            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -139,9 +193,9 @@ namespace TechMart_E_Commerce_Management_System.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.User.EmailVerification", b =>
+            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.EmailVerification", b =>
                 {
-                    b.HasOne("TechMart_E_Commerce_Management_System.Data.Entities.User.User", "User")
+                    b.HasOne("TechMart_E_Commerce_Management_System.Data.Entities.User", "User")
                         .WithMany("EmailVerficationsCodes")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -150,9 +204,9 @@ namespace TechMart_E_Commerce_Management_System.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.User.PasswordResetCode", b =>
+            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.PasswordResetCode", b =>
                 {
-                    b.HasOne("TechMart_E_Commerce_Management_System.Data.Entities.User.User", "User")
+                    b.HasOne("TechMart_E_Commerce_Management_System.Data.Entities.User", "User")
                         .WithMany("PasswordResetCodes")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -161,7 +215,7 @@ namespace TechMart_E_Commerce_Management_System.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.User.User", b =>
+            modelBuilder.Entity("TechMart_E_Commerce_Management_System.Data.Entities.User", b =>
                 {
                     b.Navigation("EmailVerficationsCodes");
 

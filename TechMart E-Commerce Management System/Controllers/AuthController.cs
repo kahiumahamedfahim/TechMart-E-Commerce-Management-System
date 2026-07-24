@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
-using TechMart_E_Commerce_Management_System.ViewModels;
+using TechMart_E_Commerce_Management_System.ViewModels.UsersDTO;
 
 namespace TechMart_E_Commerce_Management_System.Controllers
 {
@@ -314,6 +314,8 @@ namespace TechMart_E_Commerce_Management_System.Controllers
             return View();
         }
 
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "SuperAdmin")]
@@ -335,12 +337,17 @@ namespace TechMart_E_Commerce_Management_System.Controllers
                 result.Message;
             return RedirectToAction(nameof(VerifyEmail));
         }
+
+
         [HttpGet]
         [Authorize]
         public IActionResult ChangePassword()
         {
             return View();
         }
+
+
+
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]

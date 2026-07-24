@@ -3,7 +3,7 @@ using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Admin.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Services.Common;
-using TechMart_E_Commerce_Management_System.ViewModels;
+using TechMart_E_Commerce_Management_System.ViewModels.UsersDTO;
 
 namespace TechMart_E_Commerce_Management_System.Services.Admin.Implementation
 {
@@ -89,7 +89,7 @@ namespace TechMart_E_Commerce_Management_System.Services.Admin.Implementation
 
                 _userRepo.Update(admin);
 
-                await _userRepo.SaveChangeAsync();
+                await _userRepo.SaveChangesAsync();
 
                 return ServiceResult.Success(
                     admin.IsActive

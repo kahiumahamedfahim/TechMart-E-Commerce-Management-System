@@ -21,10 +21,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 //dependence inject
 builder.Services.AddScoped(
-    typeof(IGenericeRepository<>),
-    typeof(GenericRepository<>));
+    typeof(IGenericeRepository<,>),
+    typeof(GenericRepository<,>));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
 
 builder.Services.AddScoped<
     IPasswordHasher<User>,
@@ -45,7 +46,8 @@ builder.Services.AddScoped<
     IPasswordResetRepository,
     PasswordResetRepository>();
 builder.Services.AddScoped<IProfileService, ProfileService>();
-builder.Services.AddScoped<IAdminService, AdminService>();
+
+
 //session cookies part
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme)

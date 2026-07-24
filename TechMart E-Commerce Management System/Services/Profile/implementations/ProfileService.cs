@@ -2,7 +2,7 @@
 using TechMart_E_Commerce_Management_System.Services.Common;
 using TechMart_E_Commerce_Management_System.Services.File.Interfaces;
 using TechMart_E_Commerce_Management_System.Services.Profile.interfaces;
-using TechMart_E_Commerce_Management_System.ViewModels;
+using TechMart_E_Commerce_Management_System.ViewModels.UsersDTO;
 
 namespace TechMart_E_Commerce_Management_System.Services.Profile.implementations
 {
@@ -84,19 +84,24 @@ namespace TechMart_E_Commerce_Management_System.Services.Profile.implementations
                 {
                     var uploadResult =
                         await _fileService.UploadImageAsync(
-                            model.ProfileImage, "users",
+                            model.ProfileImage,
+                            "users",
                             FileConstants.ImageExtensions,
                             FileConstants.ProductImageMaxSize);
+
                     if (!uploadResult.IsSuccess)
                     {
-                        return ServiceResult.Failue
-                            (uploadResult.ErrorMessage);
-
+                        return ServiceResult.Failue(
+                            uploadResult.ErrorMessage);
                     }
+
+                    // Delete old image
+                    await _fileService.DeleteFileAsync(user.ProfileImage);
+
                     user.ProfileImage = uploadResult.FilePath;
                 }
                 _userRepo.Update(user);
-                await _userRepo.SaveChangeAsync();
+                await _userRepo.SaveChangesAsync();
                 return ServiceResult.Success(
                     "Profile updated Sucessfully!");
 

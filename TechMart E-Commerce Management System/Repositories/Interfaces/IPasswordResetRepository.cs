@@ -3,7 +3,7 @@
 namespace TechMart_E_Commerce_Management_System.Repositories.Interfaces
 {
     public interface IPasswordResetRepository :
-        IGenericeRepository<PasswordResetCode>
+        IGenericeRepository<PasswordResetCode, Guid>
     {
         Task<PasswordResetCode?> GetValidCodeAsync(Guid userId, string resetCode);
         Task<PasswordResetCode?> GetLatestCodeAsync(Guid userId);

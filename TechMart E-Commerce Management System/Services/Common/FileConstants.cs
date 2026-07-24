@@ -14,6 +14,9 @@
             2 * 1024 * 1024;
         public const long ProductImageMaxSize =
            5 * 1024 * 1024;
+        public const long AllImageMaxSize =
+            2 * 1024 * 1024;
+
 
     }
 }

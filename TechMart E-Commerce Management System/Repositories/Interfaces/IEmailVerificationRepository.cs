@@ -3,7 +3,7 @@
 namespace TechMart_E_Commerce_Management_System.Repositories.Interfaces
 {
     public interface IEmailVerificationRepository
-        : IGenericeRepository<EmailVerification>
+        : IGenericeRepository<EmailVerification, Guid>
     {
         Task<EmailVerification?> GetLatestCodeAsync(Guid userId);
         Task<EmailVerification?> GetValidCodeAsync(Guid userId,

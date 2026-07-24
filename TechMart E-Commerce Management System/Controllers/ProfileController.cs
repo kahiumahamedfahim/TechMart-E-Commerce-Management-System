@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using TechMart_E_Commerce_Management_System.Services.Profile.interfaces;
-using TechMart_E_Commerce_Management_System.ViewModels;
+using TechMart_E_Commerce_Management_System.ViewModels.UsersDTO;
 
 namespace TechMart_E_Commerce_Management_System.Controllers
 {

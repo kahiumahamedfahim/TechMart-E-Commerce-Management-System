@@ -24,16 +24,24 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5MaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/Admin/CreateAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/Admin/ResendOtp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVzZW5kT3RwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/Admin/VerifyEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmVyaWZ5RW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/Auth/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/Auth/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/Auth/CreateAdmin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDcmVhdGVBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/Auth/ForgotPassword.cshtml]
@@ -94,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = X1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/project/TechMart-E-Commerce-Management-System/TechMart E-Commerce Management System/Views/Shared/_Layout.cshtml]

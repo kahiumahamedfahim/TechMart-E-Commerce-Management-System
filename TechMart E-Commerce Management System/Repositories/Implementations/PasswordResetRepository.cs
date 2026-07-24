@@ -6,7 +6,7 @@ using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 namespace TechMart_E_Commerce_Management_System.Repositories.Implementations
 {
     public class PasswordResetRepository
-        : GenericRepository<PasswordResetCode>
+        : GenericRepository<PasswordResetCode, Guid>
         , IPasswordResetRepository
 
     {

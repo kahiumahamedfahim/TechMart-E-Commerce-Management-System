@@ -7,7 +7,7 @@ using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 namespace TechMart_E_Commerce_Management_System.Repositories.Implementations
 {
     public class UserRepository
-        : GenericRepository<User>
+        : GenericRepository<User, Guid>
         , IUserRepository
     {
         public UserRepository(AppDbcontext context)

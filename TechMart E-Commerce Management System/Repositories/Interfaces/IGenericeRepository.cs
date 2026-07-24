@@ -2,19 +2,19 @@
 
 namespace TechMart_E_Commerce_Management_System.Repositories.Interfaces
 {
-    public interface IGenericeRepository<T>
-        where T : class
+    public interface IGenericeRepository<TEntity, Tkey>
+        where TEntity : class
 
 
     {
-        Task<T?> GetByIdAsync(Guid id);
-        Task<IEnumerable<T>> GetAllAsync();
-        Task<IEnumerable<T>> FindAsync(
-            Expression<Func<T, bool>> predicate);
-        Task AddAsync(T entity);
-        void Update(T entity);
-        void Delete(T entity);
-        Task SaveChangeAsync();
+        Task<TEntity?> GetByIdAsync(Guid id);
+        Task<IEnumerable<TEntity?>> GetAllAsync();
+        Task<IEnumerable<TEntity?>> FindAsync(
+            Expression<Func<TEntity?, bool>> predicate);
+        Task AddAsync(TEntity? entity);
+        void Update(TEntity? entity);
+        void Delete(TEntity? entity);
+        Task SaveChangesAsync();
 
     }
 }

@@ -34,3 +34,5 @@ Constructor-এ IOptions<EmailSettings> পাই।
 
 options.Value দিয়ে Wrapper-এর ভিতরের
 আসল EmailSettings Object বের করি।
+
+

@@ -13,6 +13,8 @@ namespace TechMart_E_Commerce_Management_System.Data.Entities
         public Role Role { get; set; }
         public bool IsEmailVerified { get; set; }
         public bool IsActive { get; set; }
+
+
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 

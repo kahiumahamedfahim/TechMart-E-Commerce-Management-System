@@ -8,5 +8,6 @@ namespace TechMart_E_Commerce_Management_System.Services.File.Interfaces
             string folderName,
             List<string> allowedExtensions,
             long maxFileSize);
+        Task DeleteFileAsync(string? filePath);
     }
 }

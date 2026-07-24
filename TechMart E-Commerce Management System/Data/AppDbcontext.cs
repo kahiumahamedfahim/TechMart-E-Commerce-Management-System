@@ -14,6 +14,7 @@ namespace TechMart_E_Commerce_Management_System.Data
         public DbSet<User> Users { get; set; }
         public DbSet<EmailVerification> EmailVerification { get; set; }
         public DbSet<PasswordResetCode> PasswordResetCodes { get; set; }
+        public DbSet<Catagory> Catagories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(

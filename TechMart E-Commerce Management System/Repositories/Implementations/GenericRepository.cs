@@ -5,49 +5,57 @@ using TechMart_E_Commerce_Management_System.Repositories.Interfaces;
 
 namespace TechMart_E_Commerce_Management_System.Repositories.Implementations
 {
-    public class GenericRepository<T>
-        : IGenericeRepository<T>
-        where T : class
+    public class GenericRepository<TEntity, TKey>
+        : IGenericeRepository<TEntity, TKey>
+        where TEntity : class
     {
         protected readonly AppDbcontext _context;
-        protected readonly DbSet<T> _dbSet;
+        protected readonly DbSet<TEntity> _dbSet;
         public GenericRepository(AppDbcontext context)
         {
             _context = context;
-            _dbSet = context.Set<T>();
+            _dbSet = context.Set<TEntity>();
+
         }
 
-        public async Task AddAsync(T entity)
+        public async Task AddAsync(TEntity entity)
         {
             await _dbSet.AddAsync(entity);
         }
 
-        public async void Delete(T entity)
+        public void Delete(TEntity entity)
         {
             _dbSet.Remove(entity);
         }
 
-        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
+        public async Task<IEnumerable<TEntity>> FindAsync(
+            Expression<Func<TEntity, bool>> predicate)
         {
-            return await _dbSet.Where(predicate).ToListAsync();
+            return await _dbSet
+                .Where(predicate)
+                .ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+
+
+        public async Task<IEnumerable<TEntity?>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T?> GetByIdAsync(Guid id)
+        public async Task<TEntity?> GetByIdAsync(Guid id)
         {
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task SaveChangeAsync()
+
+
+        public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
         }
 
-        public async void Update(T entity)
+        public void Update(TEntity entity)
         {
             _dbSet.Update(entity);
         }

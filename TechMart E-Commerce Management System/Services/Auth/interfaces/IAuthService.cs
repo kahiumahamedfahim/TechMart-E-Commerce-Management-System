@@ -1,8 +1,7 @@
 ﻿namespace TechMart_E_Commerce_Management_System.Services.Auth.interfaces;
 using TechMart_E_Commerce_Management_System.Data.Entities;
 using TechMart_E_Commerce_Management_System.Services.Common;
-using TechMart_E_Commerce_Management_System.ViewModels;
-
+using TechMart_E_Commerce_Management_System.ViewModels.UsersDTO;
 
 public interface IAuthService
 {
